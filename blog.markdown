@@ -4,15 +4,15 @@ title: Blog
 sub-title: Find out more
 permalink: /blog/
 ---
-<ul class="archive-list">
+<nav>
 {% assign categories_list = site.categories %}
     {% for category in categories_list %}
       {% if category[0] != 'blog'%}
-        <li><a href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a></li>
+        <a href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a>
       {% endif %}
     {% endfor %}
 {% assign categories_list = nil %}
-</ul>
+</nav>
 
 {% for category in site.categories %}
   {% if category[0] != 'blog' %}
