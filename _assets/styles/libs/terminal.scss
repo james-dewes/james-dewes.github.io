@@ -80,8 +80,9 @@ body.terminal{
     }
     
     main{
-        max-width: 90%;
+        max-width: $width;
         nav{
+            width: 100%;
             a{
                 width: 100%;
                 padding: 0.5rem;

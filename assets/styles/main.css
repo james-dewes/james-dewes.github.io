@@ -174,13 +174,15 @@ body.terminal {
     body.terminal nav p {
       margin: 0; }
   body.terminal main {
-    max-width: 90%; }
-    body.terminal main nav a {
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      display: block;
-      visibility: visible; }
+    max-width: calc(90% - 14px); }
+    body.terminal main nav {
+      width: 100%; }
+      body.terminal main nav a {
+        width: 100%;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        display: block;
+        visibility: visible; }
   body.terminal .post-link {
     padding-left: 1ch; }
   body.terminal footer {
