@@ -218,12 +218,12 @@ gulp.task('build:icons', function() {
 
 // Build site
 gulp.task('build', function(callback) {
-            series('build:scripts', 'build:styles', 'build:images', 'build:fonts', 'build:icons', 'build:jekyll')();
+            series('build:scripts', 'build:styles', 'build:images', 'build:fonts', 'build:icons', 'build:downloads', 'build:jekyll')();
             callback();
           });
 
 gulp.task('build:test', function(callback){series('clean', 'build:scripts', 'build:images', 'build:styles', 'build:fonts', 'build:icons', 
-          'build:jekyll:test', callback)});
+          'build:downloads', 'build:jekyll:test', callback)});
 
 // Deletes _site directory and processed assets
 gulp.task('clean', series('clean:jekyll', 'clean:styles', 'clean:scripts', 'clean:images', 'clean:fonts', 'clean:icons'));
