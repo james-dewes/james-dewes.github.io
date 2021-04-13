@@ -4,7 +4,7 @@ title: Uses
 sub-title: Tools and tech I use
 permalink: /uses/
 ---
-Inspired by [Wes Bos](wesbos.com) from the Syntax podcast I am trying to keep a list of some of the software and hardware I use.
+Inspired by [Wes Bos](https://wesbos.com) from the Syntax podcast I am trying to keep a list of some of the software and hardware I use.
 
 <h2 class="u-h2">Editor and Terminal</h2>
 + VS Code
