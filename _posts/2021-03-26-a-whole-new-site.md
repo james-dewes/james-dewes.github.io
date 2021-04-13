@@ -13,4 +13,4 @@ I have been playing around with two themes, heavily inspired by the 80s nostalga
 
 I wanted to improve my development workflow for the site after a few hours tinkering, so I had a search and found an article by [Brett Stevenson](https://brettstevenson.io/) who had created this gist [https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed](https://gist.github.com/tterb/9bd8e94eb094f1f38fc3dd33a250a2ed) containing browsersync and several useful utilities for minimising and cleaning the site assets. Sadly I found that it did not work out of the box and I had to spend some time cleaning up and updating it to work with newer versions of gulp and the associated packages.
 
-After investing the time in the build time, I should have a better sight overall.
+After investing the time in the build time, I should have a better site overall, although in the spirit of yack shaving I think may need to refactor the build scripts when I have chance.
