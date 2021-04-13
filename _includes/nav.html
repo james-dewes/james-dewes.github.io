@@ -1,0 +1,36 @@
+<nav>
+  <a class="page-link hidden-desktop" id="navigation" href="#">
+    <div>
+      <p>
+        Navigation
+      </p>
+    </div>
+  </a>
+
+  {%- for path in page_paths -%}
+  {%- assign my_page = site.pages | where: "path", path | first -%}
+  {%- if my_page.title -%}
+    <a class="page-link" href="{{ my_page.url | relative_url }}">
+      <div>
+        <p>
+          {{ my_page.title | escape }}
+        </p>
+      </div>
+    </a>
+  {%- endif -%}
+  {%- endfor -%}
+  <a class="page-link" href="/james-dewes-cv.pdf">
+    <div>
+        <p>
+          CV
+        </p>
+    </div>
+  </a>
+  <a class="page-link" href="#" id="goRetro">
+    <div>
+      <p>
+        Go Retro
+      </p>
+    </div>
+  </a>
+</nav>

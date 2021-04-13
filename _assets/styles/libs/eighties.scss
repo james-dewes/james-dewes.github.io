@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Roadrage;
+    src: url("/assets/fonts/Roadrage-owgBd.otf");
+}
+body.eighties{
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: #2bd1fc;
+    font-size: 25px;
+    margin: 0;
+    font-family: Roadrage, sans-serif;
+
+    div{
+        padding: 5px;
+    }
+    .first{
+        width: 50%;
+        height: 50%;
+        background-color: #f3ea5f;
+        transform: skew(-3deg, -3deg);
+        margin: 4rem auto;
+    }
+    .second{
+        background-color: #2bd1fc;
+        transform: skew(-1deg, -1deg);
+    }
+    .third{
+        background-color: #ff48c4;
+        transform: skew(-2deg, -2deg);
+    }
+    header{
+        text-align: center;
+    }  
+    header p{
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+    }      
+    .u-h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+    nav{
+        width: 85%;
+        margin-left: -10px;
+        p{
+            color: black;
+        }
+        div{
+            text-align: center;
+            background-color: #ff48c4;
+            padding: 0.5rem 2rem;
+            margin: 0;
+            transform: skew(-4deg, -4deg);
+            margin-bottom: 2rem;
+            &:hover{
+                background-color: #f3ea5f;
+            }
+        }
+    }
+    article{
+        max-width: 80%;
+        margin: 0 auto;
+        transform: skew(-2deg, -2deg);
+        padding: 1rem;
+        background-color: #f3ea5f;
+    }
+    footer{
+        width: 80%;
+        margin-top: 10px;
+        background-color: #ff48c4;
+        transform: skew(-2deg, -2deg);
+        .social-media-list {
+            .svg-icon {
+                width: 1rem;
+                height: 1rem;
+                display: inline-block;
+                padding-right: 0.5ch;
+                vertical-align: text-top;
+            }
+        }
+        .footer-col-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+    }
+    @media screen and (min-width:426px){
+        nav{
+            width: 15%;
+            position: absolute;
+        }
+        nav div{
+            text-align: right;
+        }
+        article{
+            max-width: 100%;
+            min-width: 60%;
+            margin: 0 20%;
+            transform: skew(-4deg, -4deg);
+        }
+        footer{
+            .footer-col-1 {
+                width: -webkit-calc(20%);
+                width:         calc(20%);
+            }
+            
+            .footer-col-2 {
+                width: -webkit-calc(80%);
+                width:         calc(80%);
+            }
+        }
+    }
+}
