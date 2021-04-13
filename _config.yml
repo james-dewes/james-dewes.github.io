@@ -1,0 +1,38 @@
+title: James Dewes
+description: >- 
+  Studying for a BSc in Computing & IT with the OU since 2015 and Working in digital marketing since 2008.
+  Tech enthusiast & tinkerer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https:/jamesdewes.com" # the base hostname & protocol for your site, e.g. http://example.com
+linkedin_username: james-dewes
+twitter_username: jimdewes
+stackoverflow_username: 4125923/james-dewes
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

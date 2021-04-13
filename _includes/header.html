@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <div class="first">
+      <div class="second">
+          <div class="third">
+                  <h1 class="u-h1"><a href="/">James Dewes</a></h1>
+                  <p class="u-h3">Data Engineer / Full Stack Developer</p>
+          </div>
+      </div>
+    </div>
+    {%- if page_paths -%}
+      {% include nav.html %}
+    {%- endif -%}
+  </div>
+</header>

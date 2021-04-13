@@ -1,0 +1,30 @@
+.u-h1{
+    font-size: 2.611rem;
+    line-height: 1.617rem;
+}
+.u-h2{
+    font-size: 2.056rem;
+    line-height: 1.649rem;
+}
+.u-h3{
+    font-size: 1.611rem;
+    line-height: 1.69rem;
+}
+.u-h4{
+    font-size: 1.278rem;
+    line-height: 1.783rem;
+}
+p, li{
+    font-size: 1rem;
+    line-height: 1.833rem;
+}
+li + li {
+    padding-top: 0.5rem;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+    }
+}
