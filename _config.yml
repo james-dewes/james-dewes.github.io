@@ -3,7 +3,7 @@ description: >-
   Studying for a BSc in Computing & IT with the OU since 2015 and Working in digital marketing since 2008.
   Tech enthusiast & tinkerer.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https:/jamesdewes.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jamesdewes.com"
 linkedin_username: james-dewes
 twitter_username: jimdewes
 stackoverflow_username: 4125923/james-dewes
