@@ -12,6 +12,7 @@ stackoverflow_username: 4125923/james-dewes
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 sass:
     sass_dir: _sass
