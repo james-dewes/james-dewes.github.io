@@ -2,12 +2,14 @@
     font-family: VT323;
     src: url("/assets/fonts/VT323-Regular.ttf");
 }
+$background-color: black;
+$foreground-color: #4bde00;
 body.terminal{
     $width: calc(90% - 14px);
-    background-color: black;
+    background-color: $background-color;
     font-size: 25px;
     margin: 0;
-    color: #4bde00;
+    color: $foreground-color;
     font-family: Courier, monospace;
     margin-left: calc(10%);
 
@@ -32,17 +34,17 @@ body.terminal{
     }
     a{
         display: inline-block;
-        border: solid 2px  #4bde00;
+        border: solid 2px  $foreground-color;
         padding: 0.25rem;
-        color: #4bde00;
-        fill: #4bde00;
+        color: $foreground-color;
+        fill: $foreground-color;
         text-decoration: none;
         font-weight: 700;
         &:hover{
-            background-color: #4bde00;
-            color: black;
+            background-color: $foreground-color;
+            color:  $background-color;;
             svg{
-                fill: black;
+                fill:  $background-color;;
             }
         }
     }
@@ -55,13 +57,17 @@ body.terminal{
     }
     
     nav{
-        width: $width;
+        background-color:  $background-color;
+        position: absolute;
+        top: 5px;
+        right: 10px;
         margin-bottom: 1rem;
         padding: 1rem 0;
         text-align: center;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        z-index: 99;
         a{
             width: 100%;
             padding: 0.5rem;
@@ -70,11 +76,18 @@ body.terminal{
             visibility: hidden;
             &.active, 
             &:first-of-type{
-                display:inline-block;
+                display:inline;
                 visibility: visible;
+                position: relative;
+            }
+            &:first-of-type{
+                width: auto;
+                padding: 0.5rem;
+                margin: 0;
             }
         }
         p{
+            width: 100%;
             margin: 0;
         }
     }
@@ -97,7 +110,7 @@ body.terminal{
     }
     
     footer{
-        border-top: dashed 2px #4bde00;
+        border-top: dashed 2px $foreground-color;
         width: $width;
         margin-top: 10px;
         .social-media-list {
@@ -117,6 +130,7 @@ body.terminal{
 
     }
     @media screen and (min-width:426px){
+        margin: 0;
         main{
             overflow-y: scroll;
             padding-right: 1rem;
@@ -127,7 +141,7 @@ body.terminal{
                 width: 1rem;
             }
             &::-webkit-scrollbar-thumb {
-                background-color:  #4bde00;            
+                background-color:  $foreground-color;            
             }
         }
         footer{
@@ -145,7 +159,7 @@ body.terminal{
     @media screen and (min-width:600px){
         nav{
             width: $width;
-            border-bottom: dashed 2px #4bde00;
+            border-bottom: dashed 2px $foreground-color;
             margin-bottom: 1rem;
             padding: 1rem 0;
             text-align: left;
