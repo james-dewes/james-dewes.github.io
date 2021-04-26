@@ -15,7 +15,9 @@ Inspired by [Wes Bos](https://wesbos.com) from the Syntax podcast I am trying to
 + Corsair K70 (Cherry MX Brown) which is in the mid-range for noise, but feels very nice to use day to day. I love the media keys and volume control as I like to listen to music when I am working. When most of your job is typing, I can't recomend it enough, although everyone on a call knows when you are typing up your notes.
   
 + Cyberpower Gaming Battalion 504 because PC towers don't die, they just get upgraded.
+
++ Dell Latitude 7280 a capable working laptop with an Intel i7 processor and 16GB RAM.
   
-+ Element Gaming Mouse Cobalt 220 which has 5 buttons and a nice feel to it.
++ Corsair Glaive a 5 buttons mouse with an interchangeable thumb rest for a more flexable fit.
   
 + TeckNet GH10928 Surround Sound Gaming Headset which make me look like an air traffic controller, but that let me hear them and they me perfectly. Love the on-ear volume controls for when I can't use my Corsair K70.
