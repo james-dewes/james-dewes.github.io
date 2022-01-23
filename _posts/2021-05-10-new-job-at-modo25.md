@@ -3,7 +3,7 @@ layout: post
 title: Starting a new job at Modo25
 sub-title: Working as a Data Engineer in Python and with Gcloud
 excerpt: "Tomorrow, for the first time in a long time, I am going to be the new guy..."
-tags: job
+tags: [job]
 ---
 
 Tomorrow, for the first time in a long time, I am going to be the new guy as I start at the fantastic [Modo25](https://modo25.com) in Leeds!

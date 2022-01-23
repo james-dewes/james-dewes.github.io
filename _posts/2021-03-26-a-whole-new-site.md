@@ -3,7 +3,7 @@ layout: post
 title: A whole new site
 sub-title: Building on Github Pages
 excerpt: "I wanted to create a new site, I used Jekyll"
-tags: development jekyll
+tags: [development, jekyll]
 ---
 Over the last 18 months working as a developer my skillset has grown a lot and I felt that my personal site was in need of a serious refresh. I wanted to create a new site based on somthing that was going to be relitivly simple to update and maintain, secure, with no real need for a backend and bringing together content from my exisiting site and older material from Blogger. I was interested in trying static site generators and had been looking at GitHub pages for hosting, which lead me to the static site generator Jekyll.
 
