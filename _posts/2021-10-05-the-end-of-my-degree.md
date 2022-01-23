@@ -3,7 +3,7 @@ layout: post
 title: The end of 6 years with the Open University
 sub-title: What will I do with all this time?
 excerpt: "Results day is the 30th of November 2021 and with a bit of luck I might get a graduation ceremony in 2022..."
-tags: university, work, pdp
+tags: [university, work, pdp]
 ---
 
 For the last __six__ years I have been working through a degree with the Open University and after many, many hours spent sat in front of
