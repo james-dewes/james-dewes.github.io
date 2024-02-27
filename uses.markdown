@@ -20,4 +20,10 @@ Inspired by [Wes Bos](https://wesbos.com) from the Syntax podcast I am trying to
   
 + Corsair Glaive a 5 buttons mouse with an interchangeable thumb rest for a more flexable fit.
   
-+ TeckNet GH10928 Surround Sound Gaming Headset which make me look like an air traffic controller, but that let me hear them and they me perfectly. Love the on-ear volume controls for when I can't use my Corsair K70.
++ Corsair VOID RGB ELITE Wireless Premium Gaming Headset with 7.1 Surround Sound — Carbon
+
+<h2 class="u-h2">On the move</h2>
+
++ RK68 Wireless Mechanical Keyboard, 60% keyboard with Red switches - a little tall, but decent for on the go.
+
++ Google Pixel Buds Pro Charcoal - great switching between my phone and laptop although the mic is a little unreliable.
