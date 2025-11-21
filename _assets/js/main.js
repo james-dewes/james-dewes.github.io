@@ -1,21 +1,24 @@
- James = {
+James = {
   /**
   * Toggle the body class between the Terminal and Eghties styles
   * and set a cookie for persistance
   * @param {DOM Event} event 
   */
-  goRetro: function(event){
+  goRetro: function (event) {
     event.preventDefault()
-    let navigationElement = document.getElementById("goRetro").getElementsByTagName("p")[0];
-    if("eighties" === document.body.classList.value)
-    {
+    let goRetroElement = document.getElementById("goRetro");
+    if (!goRetroElement) return;
+
+    let navigationElement = goRetroElement.getElementsByTagName("p")[0];
+    if (!navigationElement) return;
+
+    if ("eighties" === document.body.classList.value) {
       document.body.classList.remove("eighties");
       document.body.classList.add("terminal");
       navigationElement.innerHTML = "Go Retro"
       document.cookie = "type=terminal; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
     }
-    else
-    {
+    else {
       document.body.classList.add("eighties");
       document.body.classList.remove("terminal");
       navigationElement.innerHTML = "Launch Terminal"
@@ -26,25 +29,31 @@
   /**
   * Update the class of the body to Eghties based on cookie values
   */
-  retroLoad: function(){
-    if(document.cookie.includes("retro")){
+  retroLoad: function () {
+    if (document.cookie.includes("retro")) {
       document.body.classList.add("eighties");
       document.body.classList.remove("terminal");
-      navigationElement.innerHTML = "Launch Terminal"
+      let navigationElement = document.getElementById("goRetro");
+      if (navigationElement) {
+        let pElement = navigationElement.getElementsByTagName("p")[0];
+        if (pElement) {
+          pElement.innerHTML = "Launch Terminal";
+        }
+      }
     }
   },
 
   /**
    * Expand and collapse the navigation
    */
-  navigation: function(event){
+  navigation: function (event) {
     event.preventDefault();
     let nextSibling = document.getElementById("navigation").nextElementSibling;
-    
-    while(nextSibling){      
-      if(nextSibling.classList.contains("active")){
+
+    while (nextSibling) {
+      if (nextSibling.classList.contains("active")) {
         nextSibling.classList.remove("active")
-      }else{
+      } else {
         nextSibling.classList.add("active")
       }
       nextSibling = nextSibling.nextElementSibling;
@@ -52,6 +61,19 @@
   }
 }
 
-document.addEventListener("DOMContentLoaded", James.retroLoad, false);
-document.getElementById("goRetro").addEventListener("click", James.goRetro, false);
-document.getElementById("navigation").addEventListener("click", James.navigation, false);
+// Initialise on DOM ready
+document.addEventListener("DOMContentLoaded", function () {
+  // Load retro theme if cookie is set
+  James.retroLoad();
+
+  // Add event listeners with error handling
+  let goRetroElement = document.getElementById("goRetro");
+  if (goRetroElement) {
+    goRetroElement.addEventListener("click", James.goRetro, false);
+  }
+
+  let navigationElement = document.getElementById("navigation");
+  if (navigationElement) {
+    navigationElement.addEventListener("click", James.navigation, false);
+  }
+}, false);
