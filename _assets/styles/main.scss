@@ -1,8 +1,8 @@
-// Import partials.
-@import
-  "../../node_modules/normalize.css/normalize.css",
-  "libs/core.scss",
-  "libs/eighties.scss",
-  "libs/terminal.scss"
-  
-;
+// Use SCSS partials (replaces deprecated @import)
+// @use rules must come before @import rules
+@use "libs/core";
+@use "libs/eighties";
+@use "libs/terminal";
+
+// Import CSS file (CSS imports are still valid, must come after @use)
+@import "../../node_modules/normalize.css/normalize.css";

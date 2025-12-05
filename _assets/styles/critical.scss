@@ -1,6 +1,2 @@
-// Import partials.
-@import
-  "libs/core.scss"
-  ;
-
-  
+// Use SCSS partial (replaces deprecated @import)
+@use "libs/core";
