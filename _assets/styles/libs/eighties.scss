@@ -2,74 +2,140 @@
     font-family: Roadrage;
     src: url("/assets/fonts/Roadrage-owgBd.otf");
 }
-body.eighties{
+
+body.eighties {
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     background-color: #2bd1fc;
     font-size: 25px;
     margin: 0;
-    font-family: Roadrage, sans-serif;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 
-    div{
+    div {
         padding: 5px;
     }
-    .first{
+
+    .first {
         width: 50%;
         height: 50%;
         background-color: #f3ea5f;
         transform: skew(-3deg, -3deg);
         margin: 4rem auto;
     }
-    .second{
+
+    .second {
         background-color: #2bd1fc;
         transform: skew(-1deg, -1deg);
     }
-    .third{
+
+    .third {
         background-color: #ff48c4;
         transform: skew(-2deg, -2deg);
     }
-    header{
+
+    header {
         text-align: center;
-    }  
-    header p{
+        font-family: Roadrage, sans-serif;
+        position: relative;
+    }
+
+    header p {
         font-size: 1.5rem;
         line-height: 1.6rem;
-    }      
-    .u-h1{
+    }
+
+    .u-h1 {
         text-align: center;
         font-size: 2rem;
+        font-family: Roadrage, sans-serif;
     }
-    nav{
+
+    nav {
         width: 85%;
         margin-left: -10px;
-        p{
+        font-family: Roadrage, sans-serif;
+        position: relative;
+
+        .hamburger-menu {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            display: inline-block;
+            width: auto;
+            padding: 0.5rem;
+            margin: 0;
+            background: #ff48c4;
+            border: none;
+            cursor: pointer;
+            transform: skew(-4deg, -4deg);
+            z-index: 100;
+
+            .hamburger-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 24px;
+                height: 18px;
+                transform: skew(4deg, 4deg); // Counter-skew the icon
+
+                span {
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background-color: black;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            &:hover {
+                background-color: #f3ea5f;
+            }
+        }
+
+        a:not(.hamburger-menu) {
+            display: none;
+            visibility: hidden;
+
+            &.active {
+                display: block;
+                visibility: visible;
+            }
+        }
+
+        p {
             color: black;
         }
-        div{
+
+        div {
             text-align: center;
             background-color: #ff48c4;
             padding: 0.5rem 2rem;
             margin: 0;
             transform: skew(-4deg, -4deg);
             margin-bottom: 2rem;
-            &:hover{
+
+            &:hover {
                 background-color: #f3ea5f;
             }
         }
     }
-    article{
+
+    article {
         max-width: 80%;
         margin: 0 auto;
-        transform: skew(-2deg, -2deg);
         padding: 1rem;
         background-color: #f3ea5f;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
     }
-    footer{
+
+    footer {
         width: 80%;
-        margin-top: 10px;
+        margin: 10px auto 0;
         background-color: #ff48c4;
         transform: skew(-2deg, -2deg);
+        font-family: Roadrage, sans-serif;
+
         .social-media-list {
             .svg-icon {
                 width: 1rem;
@@ -79,36 +145,49 @@ body.eighties{
                 vertical-align: text-top;
             }
         }
-        .footer-col-wrapper{
+
+        .footer-col-wrapper {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
         }
 
     }
-    @media screen and (min-width:426px){
-        nav{
+
+    @media screen and (min-width:426px) {
+        nav {
             width: 15%;
             position: absolute;
+
+            .hamburger-menu {
+                display: none;
+            }
+
+            a:not(.hamburger-menu) {
+                display: block;
+                visibility: visible;
+            }
         }
-        nav div{
+
+        nav div {
             text-align: right;
         }
-        article{
+
+        article {
             max-width: 100%;
             min-width: 60%;
             margin: 0 20%;
-            transform: skew(-4deg, -4deg);
         }
-        footer{
+
+        footer {
             .footer-col-1 {
                 width: -webkit-calc(20%);
-                width:         calc(20%);
+                width: calc(20%);
             }
-            
+
             .footer-col-2 {
                 width: -webkit-calc(80%);
-                width:         calc(80%);
+                width: calc(80%);
             }
         }
     }
