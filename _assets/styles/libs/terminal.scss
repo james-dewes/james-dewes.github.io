@@ -239,4 +239,76 @@ body.terminal {
             }
         }
     }
+
+    // 404 Error Page Styles
+    .error-container {
+        margin: 10px auto;
+        max-width: 600px;
+        text-align: center;
+        padding: 2rem 0;
+
+        p {
+            margin: 1rem 0;
+        }
+    }
+
+    // Print Styles
+    @media print {
+        background: white;
+        color: black;
+        font-size: 12pt;
+        line-height: 1.5;
+
+        header,
+        nav,
+        footer {
+            display: none;
+        }
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            overflow: visible;
+        }
+
+        a {
+            color: black;
+            text-decoration: underline;
+            border: none;
+            padding: 0;
+
+            &::after {
+                content: " (" attr(href) ")";
+                font-size: 0.8em;
+            }
+
+            &[href^="#"]::after,
+            &[href^="javascript:"]::after {
+                content: "";
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            page-break-after: avoid;
+            color: black;
+        }
+
+        .u-h1,
+        .u-h2,
+        .u-h3 {
+            color: black;
+        }
+
+        article {
+            page-break-inside: avoid;
+        }
+    }
 }
