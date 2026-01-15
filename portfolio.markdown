@@ -19,7 +19,7 @@ Built an immersive 3D experience using apps, 3D visualisations and hardware to a
 
 **Skills Demonstrated:** Full-stack development, 3D visualization, hardware integration, team leadership, hackathon competition
 
-[View Project](https://2016.spaceappschallenge.org/challenges/space-station/launch-a-global-experience/projects/launch-sight)
+[View Project](https://2016.spaceappschallenge.org/challenges/space-station/launch-a-global-experience/projects/launch-sight) | [View Code on GitHub](https://github.com/james-dewes/launch-sight)
 
 ---
 
@@ -68,7 +68,7 @@ Firefinder.eu took data from satellite bright points and combined this with crow
 ---
 
 ### Hulls Angels Website
-**Date:** Ongoing  
+**Date:** up to 20203  
 **Category:** Web Development
 
 An ongoing site built and maintained for the Hulls Angels wargaming club.
