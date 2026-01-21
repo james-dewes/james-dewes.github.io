@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Eat That Frog!
+title: Book Review: Eat That Frog! - Some Productivity Strategies That Work
 sub-title: Getting to grips with a classic book on productivity.
 excerpt: "As part of my drive to be more efficient I have been working through several books on getting things done, including the often referenced Eat That Frog!"
 tags: [book-review, self-improvement, productivity]

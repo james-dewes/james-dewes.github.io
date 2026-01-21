@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hackathon Leeds Hands-On with AI
+title: Hands-On with AI Hackathon - Learning Azure Data Science in Leeds
 sub-title: Hosted by AI-tech UK, xDesign and Microsoft
 excerpt: "The event was a great opportunity to learn about the applications of AI technologies in different fields, and to get hands-on experience with them..."
 tags: [ai, work, events]

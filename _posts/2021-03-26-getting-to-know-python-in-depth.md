@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting to know Python in depth
+title: Learning Python: My Journey into Data Engineering
 sub-title: Your mother was a hamster, and your father smelt of elderberries!
 excerpt: ""
 tags: [development, python]

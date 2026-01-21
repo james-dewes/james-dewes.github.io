@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A whole new site
+title: Rebuilding My Personal Site with Jekyll and GitHub Pages
 sub-title: Building on Github Pages
 excerpt: "I wanted to create a new site, I used Jekyll"
 tags: [development, jekyll]

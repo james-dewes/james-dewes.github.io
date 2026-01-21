@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lofi beats
+title: How Lo-Fi Music Helps Me Focus and Stay Productive
 sub-title: Getting into the work grove.
 excerpt: ""
 tags: [book-review, self-improvement, productivity]

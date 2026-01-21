@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reviewing Atomic Habits by James Clear
+title: Book Review: Atomic Habits - Building Better Daily Routines with James Clear
 sub-title: Building a better worklife
 excerpt: "Doing a little, every day, leads to progressive change. It doesn’t sound like a new idea, but it is a great one to drive home and to consider more pro-active thought about our small everyday actions."
 tags: [self-improvements, books, review]

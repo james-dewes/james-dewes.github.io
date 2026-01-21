@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting up and running with WSL and Docker
+title: Setting Up WSL2 and Docker for Development
 sub-title: I used Jekyll, what other new things can I try?
 excerpt: "To date I have largely been using containers from Windows, can I work with WSL?"
 tags: [development, jekyll, wsl]

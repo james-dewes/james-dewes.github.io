@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Attending Martechfest 2021
+title: My Experience at MarTechFest 2021: Returning to In-Person Events
 sub-title: An actual in person event...
 excerpt: "Results day is the 30th of November 2021 and with a bit of luck I might get a graduation ceremony in 2022..."
 tags: [marketing, work, events]
