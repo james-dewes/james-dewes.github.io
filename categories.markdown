@@ -1,0 +1,71 @@
+---
+layout: page
+title: Categories
+sub-title: Browse posts by topic
+permalink: /categories/
+---
+
+
+## Categories
+
+{% assign categories_list = site.categories %}
+{% if categories_list.size > 0 %}
+  {% for category in categories_list %}
+    {% if category[0] != 'blog' %}
+      <h2 class="u-h2" id="category-{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+        {{ category[0] | replace: '-', ' ' | capitalize }}
+        <span class="post-count">({{ category[1].size }} post{% if category[1].size != 1 %}s{% endif %})</span>
+      </h2>
+      <ul class="category-posts">
+        {% assign pages_list = category[1] %}
+        {% for post in pages_list %}
+          {% if post.title != null %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+              {% if post.excerpt %}
+                <p class="post-excerpt-small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <p>No categories found.</p>
+{% endif %}
+
+## All Tags
+
+{% assign tags_list = site.tags %}
+{% if tags_list.size > 0 %}
+  <div class="tags-cloud">
+    {% for tag in tags_list %}
+      <a href="{{ '/blog/#tag-' | append: tag[0] | downcase | relative_url }}" class="tag-link">
+        {{ tag[0] }} ({{ tag[1].size }})
+      </a>
+    {% endfor %}
+  </div>
+
+  <h2 class="u-h2">Posts by Tag</h2>
+  {% for tag in tags_list %}
+    <h3 class="u-h3" id="tag-{{ tag[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+      {{ tag[0] | capitalize }}
+      <span class="post-count">({{ tag[1].size }} post{% if tag[1].size != 1 %}s{% endif %})</span>
+    </h3>
+    <ul class="tag-posts">
+      {% assign pages_list = tag[1] %}
+      {% for post in pages_list %}
+        {% if post.title != null %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% else %}
+  <p>No tags found.</p>
+{% endif %}

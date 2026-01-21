@@ -8,6 +8,9 @@ linkedin_username: james-dewes
 twitter_username: jimdewes
 stackoverflow_username: 4125923/james-dewes
 
+# Blog settings
+show_excerpts: true
+
 # Build settings
 plugins:
   - jekyll-feed
@@ -26,14 +29,18 @@ sass:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - _assets/

@@ -4,6 +4,9 @@ title: Blog
 sub-title: Find out more
 permalink: /blog/
 ---
+
+<p><a href="{{ '/categories/' | relative_url }}">Browse by Categories & Tags →</a></p>
+
 <nav>
 {% assign categories_list = site.categories %}
     {% for category in categories_list %}
