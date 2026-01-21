@@ -1,4 +1,7 @@
-User-agent: *
-Disallow:
+# robots.txt for jamesdewes.com
 
+User-agent: *
+Allow: /
+
+# Sitemap location
 Sitemap: https://jamesdewes.com/sitemap.xml
