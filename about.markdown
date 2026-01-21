@@ -29,8 +29,8 @@ Outside of work I like to tinker with different technologies and have entered a 
 ### Tools & Platforms
 - **BigQuery** - Data warehousing and analytics
 - **DBT** - Data transformation and modeling
-  **Postgres** -- Modern RDBMS
-  **GCP** -- Cloud compute and functions
+- **Postgres** - Modern RDBMS
+- **GCP** - Cloud compute and functions
 - **Jekyll** - Static site generation
 - **WordPress** - Content management and web development
 - **Shopify** - E-commerce platform development
