@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Book Review: How to Be a Productivity Ninja - A Critical Look
+title: "Book Review: How to Be a Productivity Ninja - A Critical Look"
 sub-title: Worry Less, Achieve More and Love What You Do
-excerpt: "Productivity Ninja is a series of actions and processes to help you improve your productivity. It's not fantastic going when you keep putting the book down as you don’t have time to do whatever action is advocated ‘right now’..."
-tags: [self-improvements, books, review]
+excerpt: "Productivity Ninja is a series of actions and processes to help you improve your productivity. It's not fantastic going when you keep putting the book down as you don't have time to do whatever action is advocated 'right now'..."
+categories: [book-review]
+tags: [book-review, productivity, self-improvement, graham-allcott]
 ---
 Do you have a Ninja mindset?
 

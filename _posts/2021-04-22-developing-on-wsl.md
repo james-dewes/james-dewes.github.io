@@ -3,7 +3,8 @@ layout: post
 title: Setting Up WSL2 and Docker for Development
 sub-title: I used Jekyll, what other new things can I try?
 excerpt: "To date I have largely been using containers from Windows, can I work with WSL?"
-tags: [development, jekyll, wsl]
+categories: [development]
+tags: [development, docker, wsl, wsl2, containers, devops]
 ---
 
 Over the past year or so I have been pulled out of my comfort zone of developing on Linux or using Apache XAMPP to the more complex, discrete and simplified world of containers. In this context I mean simplified in so much that the dependencies are more closely tied to the development of a project, rather than getting up and running, with Docker and containers having their own learning curve.

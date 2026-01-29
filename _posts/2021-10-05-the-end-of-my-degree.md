@@ -3,7 +3,8 @@ layout: post
 title: Completing My BSc in Computing and IT, 6 Years with the Open University
 sub-title: What will I do with all this time?
 excerpt: "Results day is the 30th of November 2021 and with a bit of luck I might get a graduation ceremony in 2022..."
-tags: [university, work, pdp]
+categories: [personal]
+tags: [education, university, open-university, degree, bsc, computing]
 ---
 
 For the last __six__ years I have been working through a degree with the Open University and after many, many hours spent sat in front of

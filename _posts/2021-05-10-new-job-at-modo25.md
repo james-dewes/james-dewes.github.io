@@ -3,7 +3,8 @@ layout: post
 title: Starting My Data Engineering Role at Modo25
 sub-title: Working as a Data Engineer in Python and with Gcloud
 excerpt: "Tomorrow, for the first time in a long time, I am going to be the new guy..."
-tags: [job]
+categories: [career]
+tags: [career, job, modo25, data-engineering, python, gcloud]
 ---
 
 Tomorrow, for the first time in a long time, I am going to be the new guy as I start at the fantastic [Modo25](https://modo25.com) in Leeds!

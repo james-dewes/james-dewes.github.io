@@ -3,7 +3,8 @@ layout: post
 title: How Lo-Fi Music Helps Me Focus and Stay Productive
 sub-title: Getting into the work grove.
 excerpt: ""
-tags: [book-review, self-improvement, productivity]
+categories: [personal]
+tags: [productivity, music, focus, lofi, work-life-balance]
 ---
 
 To set the scene, I was working from home full time since the start of the pandemic lockdowns. Speaking to other people outside my family unit had become rare and so had the ability to find calm and focus at home, with so much going on in the world and everyone stuck in the same space 24/7.

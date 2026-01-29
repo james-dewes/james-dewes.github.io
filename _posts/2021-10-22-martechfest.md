@@ -1,9 +1,10 @@
 ---
 layout: post
-title: My Experience at MarTechFest 2021: Returning to In-Person Events
+title: "My Experience at MarTechFest 2021: Returning to In-Person Events"
 sub-title: An actual in person event...
 excerpt: "Results day is the 30th of November 2021 and with a bit of luck I might get a graduation ceremony in 2022..."
-tags: [marketing, work, events]
+categories: [events]
+tags: [events, marketing, martechfest, conference, networking]
 ---
 Like many people, I have been wrestling with the changes and risks that the global pandemic has brought to our everyday lives. Back at the end of October I was thrown in at the deep end when work offered me the opportunity to go to MarTechFest in London. An extended train trip followed the tube then by a large conference hosted at the Magazine near the O2 arena was outside of my comfort zone, so I took some self-convincing to go. I am glad I did convince myself the event was positive, highly charged and with some great speakers. It went so well in fact that I was excited to hear about DevFest UK and Ireland on the 20th of November.
 
