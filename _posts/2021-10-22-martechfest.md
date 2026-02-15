@@ -2,7 +2,7 @@
 layout: post
 title: "My Experience at MarTechFest 2021: Returning to In-Person Events"
 sub-title: An actual in person event...
-excerpt: "Attending an in person Marketing Event at the tail end of a pandemic was a chage of pace and required some thinking..."
+excerpt: "Attending an in person Marketing Event at the tail end of a pandemic was a change of pace and required some thinking..."
 categories: [events]
 tags: [events, marketing, martechfest, conference, networking]
 ---
