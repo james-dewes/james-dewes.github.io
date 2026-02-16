@@ -28,3 +28,16 @@ ul{
         list-style: none;
     }
 }
+
+// Tags cloud styling
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tag-link {
+    padding: 0.5rem 0.75rem;
+    display: inline-block;
+}
