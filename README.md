@@ -1,17 +1,57 @@
 # james-dewes.github.io
 
-To preview locally and develop run the following command:
+Personal website built with Jekyll, featuring a terminal theme with an optional retro "eighties" style.
 
-```bundle exec jekyll serve```
+## Prerequisites
 
-Then navigate to http://localhost:4000
+- **Node.js** v18+
+- **Ruby** + **Bundler** (for Jekyll builds)
 
-# Development
+## Setup
 
-To run with auto reload install the development dependencies with
-```npm install``` then run ```gulp serve```
+```bash
+npm install
+bundle install
+```
 
-# Deployment
-To build for deployment run the ```gulp build``` task
+## Development
 
-# Testing
+Start the development server with live reload:
+
+```bash
+npx gulp serve
+```
+
+This builds all assets, runs Jekyll, and launches BrowserSync at http://localhost:3000.
+
+Alternatively, use Jekyll directly:
+
+```bash
+bundle exec jekyll serve
+```
+
+Then visit http://localhost:4000.
+
+## Build
+
+```bash
+npx gulp build
+```
+
+## Deployment
+
+Push to the `main` branch — GitHub Pages builds and deploys automatically.
+
+## Project Structure
+
+```
+├── _assets/       # Source assets (SCSS, JS, images)
+├── _includes/     # Jekyll includes
+├── _layouts/      # Jekyll layouts
+├── _posts/        # Blog posts
+├── assets/        # Built assets (generated)
+├── _config.yml    # Jekyll configuration
+├── gulpfile.mjs   # Gulp build config
+├── package.json   # Node.js dependencies
+└── Gemfile        # Ruby dependencies
+```
