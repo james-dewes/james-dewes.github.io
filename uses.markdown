@@ -14,7 +14,7 @@ Inspired by [Wes Bos](https://wesbos.com) from the Syntax podcast I am trying to
 <h2 class="u-h2">Desk Setup</h2>
 + Corsair K70 (Cherry MX Brown) which is in the mid-range for noise, but feels very nice to use day to day. I love the media keys and volume control as I like to listen to music when I am working. When most of your job is typing, I can't recomend it enough, although everyone on a call knows when you are typing up your notes.
   
-+ Cyberpower Gaming Battalion 504 because PC towers don't die, they just get upgraded.
++ Lenovo Thinkbook 16GB RAM and an 11th gen Intel i7 my daily driver for work.
 
 + Dell Latitude 7280 a capable working laptop with an Intel i7 processor and 16GB RAM.
   
