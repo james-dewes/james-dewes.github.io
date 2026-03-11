@@ -156,6 +156,67 @@ body.eighties {
             }
         }
 
+        // Load more button
+        .load-more-btn {
+            background-color: #ff48c4;
+            border: none;
+            color: black;
+            font-family: Roadrage, sans-serif;
+            font-size: 1.2rem;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+            transform: skew(-4deg, -4deg);
+            margin: 1rem 0;
+
+            &:hover {
+                background-color: #f3ea5f;
+            }
+        }
+
+        // Collapsible sections
+        .collapsible-section {
+            margin: 1rem 0;
+
+            summary {
+                cursor: pointer;
+                list-style: none;
+                display: flex;
+                align-items: baseline;
+                gap: 0.5rem;
+                font-family: Roadrage, sans-serif;
+
+                &::-webkit-details-marker { display: none; }
+
+                &::before {
+                    content: '▶';
+                    font-size: 0.8rem;
+                    flex-shrink: 0;
+                }
+            }
+
+            &[open] > summary::before {
+                content: '▼';
+            }
+        }
+
+        // Tags cloud
+        .tags-cloud {
+            .tag-link {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                background-color: #2bd1fc;
+                color: black;
+                text-decoration: none;
+                transform: skew(-2deg, -2deg);
+                font-family: Roadrage, sans-serif;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: #ff48c4;
+                }
+            }
+        }
+
         // Archive list styles
         .archive-list {
             list-style: none;
@@ -191,6 +252,10 @@ body.eighties {
     footer {
         width: 80%;
         margin: 10px auto 0;
+
+        .footer-heading {
+            margin-bottom: 0.25rem;
+        }
         background-color: #ff48c4;
         transform: skew(-2deg, -2deg);
         font-family: Roadrage, sans-serif;
@@ -247,14 +312,31 @@ body.eighties {
         }
 
         footer {
-            .footer-col-1 {
-                width: -webkit-calc(20%);
-                width: calc(20%);
+            width: auto;
+            margin-left: 20%;
+            margin-right: 20%;
+
+            .footer-col-wrapper {
+                flex-direction: column;
             }
 
+            .footer-col-1,
             .footer-col-2 {
-                width: -webkit-calc(80%);
-                width: calc(80%);
+                width: 100%;
+            }
+
+            .social-media-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+
+                li {
+                    display: inline-block;
+                    padding: 0;
+                    background: none;
+                    transform: none;
+                }
             }
         }
     }

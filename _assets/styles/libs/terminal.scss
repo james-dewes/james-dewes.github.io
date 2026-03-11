@@ -155,10 +155,59 @@ body.terminal {
         padding-left: 1ch;
     }
 
+    .load-more-btn {
+        background: transparent;
+        border: solid 2px #4bde00;
+        color: #4bde00;
+        font-family: Courier, monospace;
+        font-size: 1rem;
+        padding: 0.25rem 0.75rem;
+        cursor: pointer;
+        margin: 1rem 0;
+
+        &:hover {
+            background-color: #4bde00;
+            color: black;
+        }
+    }
+
+    .collapsible-section {
+        margin: 1rem 0;
+
+        summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+
+            &::-webkit-details-marker { display: none; }
+
+            &::before {
+                content: '[+]';
+                font-family: Courier, monospace;
+                font-size: 1rem;
+                flex-shrink: 0;
+            }
+        }
+
+        &[open] > summary::before {
+            content: '[-]';
+        }
+    }
+
+    .tags-cloud {
+        .tag-link {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+        }
+    }
+
     footer {
         border-top: dashed 2px #4bde00;
         width: $width;
         margin-top: 10px;
+        padding-bottom: 1rem;
 
         .social-media-list {
             .svg-icon {
