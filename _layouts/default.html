@@ -3,18 +3,30 @@
 
   {%- include head.html -%}
 
-  <body class="terminal">
+  <body>
 
     {%- include header.html -%}
 
-    <main aria-label="Content">
-      <article class="wrapper">
-        {{ content }}
-      </article>
+    <main aria-label="Content" class="container">
+      {{ content }}
     </main>
 
     {%- include footer.html -%}
-
+    
+    <script>
+      // Dark Mode Toggle Logic
+      document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.getElementById("theme-toggle-btn");
+        if(toggleBtn) {
+          toggleBtn.addEventListener("click", function() {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+          });
+        }
+      });
+    </script>
   </body>
 
 </html>

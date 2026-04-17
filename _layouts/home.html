@@ -2,26 +2,29 @@
 layout: default
 ---
 
-<article>
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<div class="home">
+  <section class="hero">
+    <h1>Strategic Data Architecture, AI & Automation.</h1>
+    <p class="lead">
+      I build resilient data pipelines, automate complex processes, and architect intuitive systems.</p>
+    <a href="{{ " /portfolio/" | relative_url }}" class="hero-cta">View Case Studies</a>
+  </section>
 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-  <h2 class="u-h2">Recent Posts</h2>
-  <ul>
+  <h2 class="u-h2">Latest Insights</h2>
+  <ul class="post-list">
     {%- for post in site.posts limit:10 -%}
     {% unless post.url contains "archive" %}
     <li>
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }} >> <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{
-            post.date | date: "%B %d, %Y" }}</time>
+          {{ post.title | escape }}
         </a>
       </h3>
+      <span class="post-meta">{{ post.date | date: "%B %d, %Y" }}</span>
       {%- if site.show_excerpts -%}
       <div class="post-excerpt">
         {{ post.excerpt | default: post.content | strip_html | truncatewords: 30 }}
@@ -31,7 +34,5 @@ layout: default
     {% endunless %}
     {%- endfor -%}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
-</article>
+</div>

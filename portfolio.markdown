@@ -1,80 +1,90 @@
 ---
 layout: page
-title: Portfolio
-redirect_from:
- - /projects/
-sub-title: Selected projects and work
+title: Portfolio & Case Studies
 permalink: /portfolio/
 ---
 
-## Featured Project
+<p class="page-content" style="margin-bottom: 32px; color: var(--text-muted);">
+A selection of architecture and engineering case studies illustrating performant solutions constructed for demanding, compliance-heavy, and extreme-scale environments.
+</p>
 
-### Space Apps 2016 - Launch Sight
-**Date:** April 2016  
-**Category:** Full Stack Development / 3D Visualization
+## Mission Critical & Aerospace Engineering
 
-Built an immersive 3D experience using apps, 3D visualisations and hardware to allow the user to view, hear and feel a rocket launch. Winners of the 2016 York Space Apps Challenge and chosen as the globally winning project for challenges set by the Kennedy Space Center.
+<div class="portfolio-grid">
 
-**Key Technologies:** 3D Graphics, Mobile Development, Hardware Integration, Web Development
+  <div class="project-card">
+    <h3>Space Apps 2018 - Polar Ice Serialization</h3>
+    <div class="project-meta">Data Pipeline • Space Sector</div>
+    <div class="project-content">
+      Engineered a data transformation pipeline using Pandas and NumPy to process over 3.4 billion environmental data points into web-ready visual streams. Built for the NASA Space Apps Challenge.
+    </div>
+    <a href="https://2018.spaceappschallenge.org/challenges/icy-glare/recycle-polar-opposites/teams/summit/" class="project-link">View Outcome -></a>
+  </div>
 
-**Skills Demonstrated:** Full-stack development, 3D visualization, hardware integration, team leadership, hackathon competition
+  <div class="project-card">
+    <h3>Space Apps 2016 - Launch Sight</h3>
+    <div class="project-meta">Systems Integration • Space Sector</div>
+    <div class="project-content">
+      Designed an immersive experience combining real-time sensory hardware feeds with 3D visualization. Winner of the 2016 York Challenge and Kennedy Space Center Global Project.
+    </div>
+    <a href="https://2016.spaceappschallenge.org/challenges/space-station/launch-a-global-experience/projects/launch-sight" class="project-link">View Project -></a>
+  </div>
+  
+  <div class="project-card">
+    <h3>Space Apps 2017 - Firefinder.eu Analysis</h3>
+    <div class="project-meta">Geospatial Processing • Environmental Sector</div>
+    <div class="project-content">
+      Architected a streaming data aggregator that married live satellite bright-point telemetry with variable crowdsourced JSON feeds to map ongoing crises dynamically via Google Maps APIs. People's Choice Winner.
+    </div>
+    <a href="https://2017.spaceappschallenge.org/challenges/warning-danger-ahead/and-you-can-help-fight-fires/teams/firefindereu" class="project-link">View Implementation -></a>
+  </div>
 
-[View Project](https://2016.spaceappschallenge.org/challenges/space-station/launch-a-global-experience/projects/launch-sight) | [View Code on GitHub](https://github.com/james-dewes/launch-sight)
+</div>
 
----
+## Hardware & Accessibility Engineering
 
-## Other Projects
+<div class="portfolio-grid">
 
-### Space Apps 2018 - Polar Ice Visualization
-**Date:** April 2018  
-**Category:** Data Engineering / Visualization
+  <div class="project-card">
+    <h3>Hack Manchester - Tactile Smart Meter</h3>
+    <div class="project-meta">IoT Development • Embedded Systems</div>
+    <div class="project-content">
+      Developed the firmware integration and C# .NET API backend connecting physical stepper-motor tactile feedback with smart-meter JSON APIs to assist the visually impaired manage their energy consumption.
+    </div>
+    <a href="https://www.youtube.com/watch?feature=youtu.be&v=k73Jceg-lM8&t=41m30s" class="project-link">View Demonstration -></a>
+  </div>
 
-Processing 3.4 billion data points with Pandas to produce 2D and 3D visualisations of polar ice at the north and south poles, with an accompanying website. Built for NASA Space Apps Challenge.
+</div>
 
-**Key Technologies:** Python, Pandas, NumPy, Data Visualization, Web Development
+## Web Infrastructure
 
-**Skills Demonstrated:** Large-scale data processing, scientific computing, data visualization, web development, hackathon collaboration
+<div class="portfolio-grid">
 
-[View Project](https://2018.spaceappschallenge.org/challenges/icy-glare/recycle-polar-opposites/teams/summit/)
+  <div class="project-card">
+    <h3>Data Architecture Portfolio (This Site)</h3>
+    <div class="project-meta">Static Site Generation • CI/CD</div>
+    <div class="project-content">
+      Engineered a statically generated, Markdown-based portfolio using Jekyll and Liquid templating. Features an automated Gulp-based SCSS build pipeline, native dark mode support, and continuous deployment via GitHub Pages to ensure fast load times and zero hosting costs.
+    </div>
+    <a href="/" class="project-link">Explore Platform -></a>
+  </div>
 
----
+  <div class="project-card">
+    <h3>Saltwood Crafts Platform</h3>
+    <div class="project-meta">Next.js Architecture • E-Commerce</div>
+    <div class="project-content">
+      Architected a performant and responsive storefront for artisanal woodworking using Next.js and Tailwind CSS. Integrated Netlify Core Primitives to optimize image-heavy rendering and ensure rapid content delivery for custom hand-crafted products.
+    </div>
+    <a href="https://saltwoodcrafts.netlify.app" class="project-link">View Platform -></a>
+  </div>
 
-### Hack Manchester 2017 - Tactile Smart Meter
-**Date:** October 2017  
-**Category:** Full Stack Development / Hardware
+  <div class="project-card">
+    <h3>Hulls Angels Digital Platform</h3>
+    <div class="project-meta">Web Platform Architecture</div>
+    <div class="project-content">
+      Full-stack deployment and ongoing maintenance for a community engagement platform up to 2023.
+    </div>
+    <a href="https://hullsangels.com" class="project-link">Visit Platform -></a>
+  </div>
 
-Over a weekend team Tacky built a tactile smart meter for the visually impaired. Runners up in the challenge category, written in Python and C# .Net.
-
-**Key Technologies:** Python, C# .NET, Hardware Integration, IoT
-
-**Skills Demonstrated:** Rapid prototyping, hardware development, accessibility design, cross-platform development
-
-[View Project](https://www.youtube.com/watch?feature=youtu.be&v=k73Jceg-lM8&t=41m30s)
-
----
-
-### Space Apps 2017 - Firefinder.eu
-**Date:** April 2017  
-**Category:** Data Engineering / Mapping
-
-Firefinder.eu took data from satellite bright points and combined this with crowdsourced data to plot likely fires, using Google Maps. Winner of the peoples choice award.
-
-**Key Technologies:** Python, Google Maps API, Data Processing, Crowdsourcing
-
-**Skills Demonstrated:** API integration, geospatial analysis, data aggregation, user experience design
-
-[View Project](https://2017.spaceappschallenge.org/challenges/warning-danger-ahead/and-you-can-help-fight-fires/teams/firefindereu)
-
----
-
-### Hulls Angels Website
-**Date:** up to 20203  
-**Category:** Web Development
-
-An ongoing site built and maintained for the Hulls Angels wargaming club.
-
-**Key Technologies:** Web Development
-
-**Skills Demonstrated:** Web development, client communication, ongoing maintenance
-
-[View Project](https://hullsangels.com)
+</div>

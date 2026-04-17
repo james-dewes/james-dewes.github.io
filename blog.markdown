@@ -14,9 +14,9 @@ permalink: /blog/
   <h3>
     <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
   </h3>
-  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+  <span class="post-meta">{{ post.date | date: "%B %d, %Y" }}</span>
   {%- if site.show_excerpts and post.excerpt -%}
-  <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
   {%- endif -%}
 </li>
 {% endunless %}
