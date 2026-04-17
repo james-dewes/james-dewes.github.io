@@ -7,19 +7,117 @@ permalink: /categories/
 
 <h2 class="u-h2">Categories</h2>
 
-{% assign categories_list = site.categories %}
-{% if categories_list.size > 0 %}
-{% for category in categories_list %}
-{% if category[0] != 'blog' %}
-<details class="collapsible-section" id="category-{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+{% assign top_categories_str = "" %}
+{% for post in site.posts %}
+{% assign idx0 = 0 %}
+{% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+{% assign idx0 = 1 %}
+{% endif %}
+{% assign pf = post.categories[idx0] | downcase %}
+{% if pf %}
+{% assign search_str = "|" | append: pf | append: "|" %}
+{% assign current_tops = "|" | append: top_categories_str %}
+{% unless current_tops contains search_str %}
+{% assign top_categories_str = top_categories_str | append: pf | append: "|" %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+{% assign top_categories = top_categories_str | split: "|" %}
+
+{% if top_categories.size > 0 %}
+{% for top_cat in top_categories %}
+{% if top_cat != 'archive' and top_cat != 'blog' and top_cat != '' %}
+<details class="collapsible-section" id="category-{{ top_cat | url_escape | strip | replace: ' ', '-' }}">
   <summary class="u-h2">
-    {{ category[0] | replace: '-', ' ' | capitalize }}
-    <span class="post-count">({{ category[1].size }} post{% if category[1].size != 1 %}s{% endif %})</span>
+    {{ top_cat | replace: '-', ' ' | capitalize }}
   </summary>
-  <ul class="category-posts">
-    {% assign pages_list = category[1] %}
-    {% for post in pages_list %}
-    {% if post.title != null %}
+
+  {% assign subcategories_str = "" %}
+  {% for post in site.posts %}
+  {% assign idx0 = 0 %}
+  {% assign idx1 = 1 %}
+  {% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+  {% assign idx0 = 1 %}
+  {% assign idx1 = 2 %}
+  {% endif %}
+  {% assign pf = post.categories[idx0] | downcase %}
+  {% assign ps = post.categories[idx1] | downcase %}
+
+  {% if pf == top_cat and ps != '' and ps != null %}
+  {% assign search_str = "|" | append: ps | append: "|" %}
+  {% assign current_subs = "|" | append: subcategories_str %}
+  {% unless current_subs contains search_str %}
+  {% assign subcategories_str = subcategories_str | append: ps | append: "|" %}
+  {% endunless %}
+  {% endif %}
+  {% endfor %}
+  {% assign subcategories = subcategories_str | split: "|" %}
+
+  {% if subcategories.size > 0 %}
+  {% for sub_cat in subcategories %}
+  <details class="collapsible-section" id="category-{{ top_cat }}-{{ sub_cat }}"
+    style="margin-left: 20px; margin-top: 10px;">
+    <summary class="u-h3" style="cursor:pointer;">{{ sub_cat | replace: '-', ' ' | capitalize }}</summary>
+    <ul class="category-posts" style="margin-top: 10px;">
+      {% for post in site.posts %}
+      {% assign idx0 = 0 %}
+      {% assign idx1 = 1 %}
+      {% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+      {% assign idx0 = 1 %}
+      {% assign idx1 = 2 %}
+      {% endif %}
+      {% assign pf = post.categories[idx0] | downcase %}
+      {% assign ps = post.categories[idx1] | downcase %}
+
+      {% if pf == top_cat and ps == sub_cat %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        {% if post.excerpt %}
+        <p class="post-excerpt-small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        {% endif %}
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+
+  <ul class="category-posts" style="margin-top: 10px;">
+    {% for post in site.posts %}
+    {% assign idx0 = 0 %}
+    {% assign idx1 = 1 %}
+    {% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+    {% assign idx0 = 1 %}
+    {% assign idx1 = 2 %}
+    {% endif %}
+    {% assign pf = post.categories[idx0] | downcase %}
+    {% assign ps = post.categories[idx1] | downcase %}
+
+    {% if pf == top_cat %}
+    {% if ps == '' or ps == null %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      {% if post.excerpt %}
+      <p class="post-excerpt-small">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+      {% endif %}
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% else %}
+  <ul class="category-posts" style="margin-top: 10px;">
+    {% for post in site.posts %}
+    {% assign idx0 = 0 %}
+    {% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+    {% assign idx0 = 1 %}
+    {% endif %}
+    {% assign pf = post.categories[idx0] | downcase %}
+
+    {% if pf == top_cat %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
@@ -30,9 +128,85 @@ permalink: /categories/
     {% endif %}
     {% endfor %}
   </ul>
+  {% endif %}
 </details>
 {% endif %}
 {% endfor %}
+
+{% if top_categories contains 'archive' %}
+<details class="collapsible-section" id="category-archive">
+  <summary class="u-h2">Archive</summary>
+
+  {% assign subcategories_str = "" %}
+  {% for post in site.posts %}
+  {% assign idx0 = 0 %}
+  {% assign idx1 = 1 %}
+  {% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+  {% assign idx0 = 1 %}
+  {% assign idx1 = 2 %}
+  {% endif %}
+  {% assign pf = post.categories[idx0] | downcase %}
+  {% assign ps = post.categories[idx1] | downcase %}
+
+  {% if pf == 'archive' and ps != '' and ps != null %}
+  {% assign search_str = "|" | append: ps | append: "|" %}
+  {% assign current_subs = "|" | append: subcategories_str %}
+  {% unless current_subs contains search_str %}
+  {% assign subcategories_str = subcategories_str | append: ps | append: "|" %}
+  {% endunless %}
+  {% endif %}
+  {% endfor %}
+  {% assign subcategories = subcategories_str | split: "|" %}
+
+  {% for sub_cat in subcategories %}
+  <details class="collapsible-section" id="category-archive-{{ sub_cat }}" style="margin-left: 20px; margin-top: 10px;">
+    <summary class="u-h3" style="cursor:pointer;">{{ sub_cat | replace: '-', ' ' | capitalize }}</summary>
+    <ul class="category-posts" style="margin-top: 10px;">
+      {% for post in site.posts %}
+      {% assign idx0 = 0 %}
+      {% assign idx1 = 1 %}
+      {% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+      {% assign idx0 = 1 %}
+      {% assign idx1 = 2 %}
+      {% endif %}
+      {% assign pf = post.categories[idx0] | downcase %}
+      {% assign ps = post.categories[idx1] | downcase %}
+
+      {% if pf == 'archive' and ps == sub_cat %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+
+  <ul class="category-posts" style="margin-top: 10px;">
+    {% for post in site.posts %}
+    {% assign idx0 = 0 %}
+    {% assign idx1 = 1 %}
+    {% if post.categories[0] == 'blog' or post.categories[0] == 'Blog' %}
+    {% assign idx0 = 1 %}
+    {% assign idx1 = 2 %}
+    {% endif %}
+    {% assign pf = post.categories[idx0] | downcase %}
+    {% assign ps = post.categories[idx1] | downcase %}
+
+    {% if pf == 'archive' %}
+    {% if ps == '' or ps == null %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    </li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
+
 {% else %}
 <p>No categories found.</p>
 {% endif %}
@@ -72,3 +246,15 @@ permalink: /categories/
 {% else %}
 <p>No tags found.</p>
 {% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.hash) {
+      var target = document.querySelector(window.location.hash);
+      if (target && target.tagName.toLowerCase() === 'details') {
+        target.open = true;
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>

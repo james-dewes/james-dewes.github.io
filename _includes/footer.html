@@ -1,13 +1,27 @@
-<footer class="site-footer">
-      <h2 class="footer-heading">{{ site.title | escape }}</h2>
-      <div class="footer-col-wrapper">
-        <div class="footer-col footer-col-1">
-          {%- include social.html -%}          
-        </div>
+<footer class="site-footer container">
+  <h2 class="u-h3" style="margin-bottom: 24px;">{{ site.title | escape }}</h2>
   
-        <div class="footer-col footer-col-2">
-          <p>{{- site.description | escape -}}</p>
-        </div>
-      </div>
+  <p style="max-width: 600px; margin: 0 auto 32px auto; color: var(--text-muted);">
+    {{- site.description | escape -}}
+  </p>
+
+  <div class="social-links" style="display: flex; gap: 24px; justify-content: center; list-style: none; padding: 0; font-family: var(--font-sans); font-size: 0.9rem; text-transform: uppercase;">
+    {%- if site.linkedin_username -%}
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" target="_blank">LinkedIn</a>
+    {%- endif -%}
+    {%- if site.github_username -%}
+      <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}" target="_blank">GitHub</a>
+    {%- endif -%}
+    {%- if site.twitter_username -%}
+      <a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}" target="_blank">Twitter</a>
+    {%- endif -%}
+    {%- if site.stackoverflow_username -%}
+      <a href="https://stackoverflow.com/users/{{ site.stackoverflow_username| escape }}" target="_blank">StackOverflow</a>
+    {%- endif -%}
+  </div>
+  
+  <p style="margin-top: 48px; font-size: 0.8rem; color: var(--border-color);">
+    &copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }}. All rights reserved.
+  </p>
 </footer>
 <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
