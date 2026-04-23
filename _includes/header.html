@@ -1,7 +1,13 @@
 <header class="site-header container">
   <a class="site-title" rel="author" href="{{ "/" | relative_url }}">James Dewes</a>
 
-  <nav class="site-nav">
+  <button class="hamburger-toggle" aria-label="Toggle navigation" aria-expanded="false" id="mobile-menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="site-nav" id="site-nav">
     <a href="{{ "/portfolio/" | relative_url }}">Portfolio</a>
     <a href="{{ "/blog/" | relative_url }}">Blog</a>
     <a href="{{ "/about/" | relative_url }}">About</a>

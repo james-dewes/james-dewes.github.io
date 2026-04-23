@@ -25,6 +25,18 @@
             localStorage.setItem("theme", newTheme);
           });
         }
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const siteNav = document.getElementById("site-nav");
+        if(mobileMenuBtn && siteNav) {
+          mobileMenuBtn.addEventListener("click", function() {
+            mobileMenuBtn.classList.toggle("is-active");
+            siteNav.classList.toggle("is-open");
+            const expanded = mobileMenuBtn.getAttribute("aria-expanded") === "true";
+            mobileMenuBtn.setAttribute("aria-expanded", !expanded);
+          });
+        }
       });
     </script>
   </body>
