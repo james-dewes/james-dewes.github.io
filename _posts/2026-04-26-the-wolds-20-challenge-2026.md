@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Wolds 20 Challenge 2026 - Completed in 7h 44min
+title: The Wolds 20 Challenge 2026 - Completed in 7h 42min
 sub-title: Better Prepared for the road ahead 
 excerpt: "Last year the Wolds 20 was a challenge to see what I was capable of, having tailed off my training after completing the Yorkshire Three Peaks the year before. This year the Wolds 20 is a step on the upswing to the same challenge..."
 categories: [personal]
