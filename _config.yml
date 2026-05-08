@@ -44,3 +44,9 @@ exclude:
   - package-lock.json
   - gulpfile.js
   - _assets/
+
+
+commonmarker:
+  header_scripts:
+    - type: "X-Clacks-Overhead"
+      content: "GNU Terry Pratchett, Martin Cooper, Ben Latham, Alex Leith"
